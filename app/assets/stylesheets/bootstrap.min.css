@@ -4115,17 +4115,23 @@ textarea.input-group-sm>.input-group-btn>.btn {
 }
 .nav>li {
     position: relative;
-    display: block
+    text-align: center;
+    height: 130px;
+    width: 100%;
+    display: table;
 }
 .nav>li>a {
     position: relative;
-    display: block;
+    display: table;
+    text-align: center;
+    height: 130px;
+    width: 100%;
     padding: 10px 15px
 }
 .nav>li>a:focus,
 .nav>li>a:hover {
     text-decoration: none;
-    background-color: #eee
+    background-color: #CC7A00
 }
 .nav>li.disabled>a {
     color: #777

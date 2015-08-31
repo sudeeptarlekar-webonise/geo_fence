@@ -6,10 +6,12 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    .container-fluid
-      .row
-        .col-sm-3.col-md-2.sidebar
-          %ul.nav.nav-sidebar
-            %li.active
-              %a(href = "#")
+    -if admin_signed_in?
+      .container-fluid
+        .row
+          .col-sm-3.col-md-2.sidebar
+            %ul.nav.nav-sidebar
+              %li= link_to "Dashboard"
+              %li= link_to "Protocol"
+              %li= link_to "Sign Out", destroy_admin_session_path, html_methods ={:method => "DELETE"}
     = yield
